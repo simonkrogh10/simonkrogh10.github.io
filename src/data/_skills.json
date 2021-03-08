@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Webudvikling",
+    "id": 1,
+    "skillList": [
+      {
+        "id": 1,
+        "name": "HTML, CSS & JavaScript"
+      },
+      {
+        "id": 2,
+        "name": "React.js"
+      },
+      {
+        "id": 3,
+        "name": "Bootstrap, TailwindCSS"
+      },
+      {
+        "id": 4,
+        "name": "Git & GitHub"
+      },
+      {
+        "id": 5,
+        "name": "WordPress"
+      }
+    ]
+  },
+  {
+    "title": "Design",
+    "id": 2,
+    "skillList": [
+      {
+        "id": 1,
+        "name": "Interaction Design"
+      },
+      {
+        "id": 2,
+        "name": "Adobe Illustrator"
+      },
+      {
+        "id": 3,
+        "name": "Adobe XD & Figma"
+      },
+      {
+        "id": 4,
+        "name": "User Experiece"
+      }
+    ]
+  }
+]

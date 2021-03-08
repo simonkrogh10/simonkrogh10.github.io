@@ -1,12 +1,24 @@
-.App {
+
+
+.Home {
   text-align: center;
+}
+
+.nav-content, .footer div div{
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.active{
+  color: black!important;
+}
+.visible{
+  display: block;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -22,6 +34,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.path-svg{
+  left: 30vw;
+  z-index: -100000;
 }
 
 .App-link {

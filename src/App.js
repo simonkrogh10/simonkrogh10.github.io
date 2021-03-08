@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./parts/Navbar";
+import Footer from "./parts/Footer";
+import Home from "./views/Home";
+import About from "./views/About";
+import Project from "./components/Project";
+import ThatNotFoundPage from "./views/ThatNotFoundPage";
+import { Helmet } from "react-helmet";
 
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="application">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Simon Krogh</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+          <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+          />
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
+        </Helmet>
+      </div>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/projects/:slug">
+              <Project />
+            </Route>
+            <Route>
+              <ThatNotFoundPage />
+              <Redirect to="/" />
+            </Route>
+          </Switch>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

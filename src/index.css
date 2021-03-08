@@ -1,13 +1,146 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
+  overflow-x: hidden;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Work Sans',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.main-wrapper, .about-wrapper{
+  max-width: 1366px;
+  margin: 0 auto;
+}
+button{
+  background-color: "#006D62";
+  
+}
+button:focus{
+  outline: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.ms-slider {
+  display: inline-block;
+  height: 1.5em;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.ms-slider__words {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-animation-name: wordSlider;
+          animation-name: wordSlider;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+ font-weight: bold;
+}
+.ms-slider__word {
+  display: block;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+@-webkit-keyframes wordSlider {
+  0%, 27% {
+    transform: translateY(0%);
+  }
+  33%, 60% {
+    transform: translateY(-25%);
+  }
+  66%, 93% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-75%);
+  }
+}
+
+@keyframes wordSlider {
+  0%, 27% {
+    transform: translateY(0%);
+  }
+  33%, 60% {
+    transform: translateY(-25%);
+  }
+  66%, 93% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-75%);
+  }
+}
+
+.wordCarousel {
+
+  font-weight: normal;
+  color: #000;
+}
+.wordCarousel div {
+      overflow: hidden;
+      position: relative;
+      float: right;
+      height: 65px;
+      padding-top: 10px;
+      margin-top: -10px;
+}
+.wordCarousel div li {
+          font-family: 'Work Sans',sans-serif;
+          color: #006D62;
+          font-weight: 700;
+          padding: 0 10px;
+          height: 45px;
+          margin-bottom: 45px;
+          display: block;
+
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+  0% { margin-top: -180px; }
+  5% { margin-top: -90px;  }
+  50% { margin-top: -90px; }
+  55% { margin-top: 0px; }
+  99.99% { margin-top: 0px; }
+  100% { margin-top: -270px; }
+}
+
+@keyframes flip3 {
+  0% { margin-top: -270px; }
+  5% { margin-top: -180px; }
+  33% { margin-top: -180px; }
+  38% { margin-top: -90px; }
+  66% { margin-top: -90px; }
+  71% { margin-top: 0px; }
+  99.99% { margin-top: 0px; }
+  100% { margin-top: -270px; }
+}
+
+@keyframes flip4 {
+  0% { margin-top: -360px; }
+  5% { margin-top: -270px; }
+  25% { margin-top: -270px; }
+  30% { margin-top: -180px; }
+  50% { margin-top: -180px; }
+  55% { margin-top: -90px; }
+  75% { margin-top: -90px; }
+  80% { margin-top: 0px; }
+  99.99% { margin-top: 0px; }
+  100% { margin-top: -270px; }
 }
